@@ -6,7 +6,32 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Canvas>
-        <TextBlock Text="Hello World!" x:Name="TextBlock1" Canvas.Left="20" Canvas.Top="30"/>
-    </Canvas>
+    <Grid Background="White">
+        <native:HtmlCanvas Name="HtmlCanvas1" xmlns:native="using:CSHTML5.Native.Html.Controls"/>
+        <Border Background="#FFAA0000" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="10,8" CornerRadius="4" Margin="20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Frames per second:" Foreground="#FFFFBBBB"/>
+                <TextBlock x:Name="FramesPerSecondTextBlock" Text="..." Foreground="#FFFFBBBB" Margin="8,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <ComboBox x:Name="ComboBoxToChooseNumberOfSprites" Width="100" Margin="10" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ComboBoxItem>5 sprites</ComboBoxItem>
+            <ComboBoxItem>10 sprites</ComboBoxItem>
+            <ComboBoxItem>25 sprites</ComboBoxItem>
+            <ComboBoxItem>50 sprites</ComboBoxItem>
+            <ComboBoxItem>100 sprites</ComboBoxItem>
+            <ComboBoxItem>250 sprites</ComboBoxItem>
+            <ComboBoxItem>500 sprites</ComboBoxItem>
+            <ComboBoxItem>1000 sprites</ComboBoxItem>
+            <ComboBoxItem>2500 sprites</ComboBoxItem>
+            <ComboBoxItem>5000 sprites</ComboBoxItem>
+            <ComboBoxItem>10000 sprites</ComboBoxItem>
+            <ComboBoxItem>25000 sprites</ComboBoxItem>
+            <ComboBoxItem>50000 sprites</ComboBoxItem>
+            <ComboBoxItem>100000 sprites</ComboBoxItem>
+            <ComboBoxItem>250000 sprites</ComboBoxItem>
+            <ComboBoxItem>500000 sprites</ComboBoxItem>
+            <ComboBoxItem>1000000 sprites</ComboBoxItem>
+        </ComboBox>
+    </Grid>
 </Page>
