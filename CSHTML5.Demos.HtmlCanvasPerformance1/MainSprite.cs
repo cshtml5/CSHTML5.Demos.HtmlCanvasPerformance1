@@ -16,12 +16,12 @@ namespace CSHTML5.Demos.HtmlCanvasPerformance1
         public MainSprite(int index)
         {
             Random rand = new Random(index);
-            
+
             // Set a random background color:
             this.FillColor = Color.FromArgb((byte)rand.Next(256), (byte)rand.Next(256), (byte)rand.Next(256), (byte)rand.Next(256));
 
             // Set the size:
-            this.Width = 20d + Math.Log10(index) * 5d;
+            this.Width = 38d + Math.Log10(index) * 8d;
             this.Height = 30d;
 
             // Display the index:
@@ -29,10 +29,21 @@ namespace CSHTML5.Demos.HtmlCanvasPerformance1
             {
                 Text = index.ToString(),
                 FontHeight = 16d,
-                X = 5,
-                Y = 5
+                X = 25,
+                Y = 2
             };
             this.Children.Add(text);
+
+            // Add the small logo:
+            var logo = new ImageElement()
+            {
+                Source = "ms-appx:///CSHTML5.Demos.HtmlCanvasPerformance1/SmallLogo.png",
+                Width = 16,
+                Height = 16,
+                X = 5,
+                Y = 6
+            };
+            this.Children.Add(logo);
         }
     }
 }
